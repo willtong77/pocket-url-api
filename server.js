@@ -7,7 +7,7 @@ const path = require('path');
 
 const port = process.env.PORT || 4567;
 app.use(cors({
-  origin: 'https://pocket-url-frontend.herokuapp.com/'
+  origin: 'https://pocket-url-frontend.herokuapp.com'
 }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
