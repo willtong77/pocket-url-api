@@ -70,6 +70,11 @@ app.get('/urls', async (req, res) => {
   }
 });
 
+// BLANK
+app.get('/', (req, res) => {
+  res.json({ data: null });
+});
+
 // GET REDIRECT
 app.get('/:shortId', async (req, res) => {
   const shortId = req.params.shortId;
