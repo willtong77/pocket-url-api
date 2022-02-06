@@ -6,10 +6,9 @@ const app = express();
 const path = require('path');
 
 const port = process.env.PORT || 5000;
-const corsOptions = {
-  origin: 'https://pocket-url-frontend.herokuapp.com'
-};
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: 'https://pocket-url-frontend.herokuapp.com/'
+}));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 require('dotenv').config();
