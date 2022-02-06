@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4567;
 app.use(cors({
   origin: 'https://pocket-url-frontend.herokuapp.com/'
 }));
@@ -50,10 +50,6 @@ mongoose.connection.on('error', (err) => {
 // Routes
 
 // GET
-
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
 
 app.get('/urls', async (req, res) => {
   const shortId = req.query.shortId;
